@@ -92,53 +92,53 @@ The minimum number of comparisons is also tracked in a list in the Online Encycl
 
 ## References
 
-(Ayala-Rincon 2007)
-M. Ayala-Rincon, B. T. de Abreu, J. de Sequira, A variant of the Ford-Johnson algorithm that is more space efficient. Inf. Proc. Letters, 102, 5 (2007) 201–207.
-https://www.researchgate.net/publication/222571621_A_variant_of_the_Ford-Johnson_algorithm_that_is_more_space_efficient
+- __(Ayala-Rincon 2007)__
+  M. Ayala-Rincon, B. T. de Abreu, J. de Sequira, A variant of the Ford-Johnson algorithm that is more space efficient. Inf. Proc. Letters, 102, 5 (2007) 201–207.
+  https://www.researchgate.net/publication/222571621_A_variant_of_the_Ford-Johnson_algorithm_that_is_more_space_efficient
 
-(Bui 1985)
-T. D. Bui, M. Thanh, Significant improvements to the Ford-Johnson algorithm for sorting, BIT, 25 (1985) 70–75.
-https://link.springer.com/article/10.1007/BF01934989
+- __(Bui 1985)__
+  T. D. Bui, M. Thanh, Significant improvements to the Ford-Johnson algorithm for sorting, BIT, 25 (1985) 70–75.
+  https://link.springer.com/article/10.1007/BF01934989
 
-(Ford 1959)
-L. Ford, S. Johnson, A tournament problem, American Mathematical Monthly 66 (1959) 387–389.
-https://www.jstor.org/stable/2308750
+- __(Ford 1959)__
+  L. Ford, S. Johnson, A tournament problem, American Mathematical Monthly 66 (1959) 387–389.
+  https://www.jstor.org/stable/2308750
 
-(JaakkoK 2009)
-https://stackoverflow.com/questions/1935194/sorting-an-array-with-minimal-number-of-comparisons/1935353#1935353
+- __(JaakkoK 2009)__
+  https://stackoverflow.com/questions/1935194/sorting-an-array-with-minimal-number-of-comparisons/1935353#1935353
 
-(Kasai 1994)
-T. Kasai, S. Sawato, S. Iwata, Thirty Four Comparisons Are Required to Sort 13 Items, LNCS, 792, (1994) 260–269.
+- __(Kasai 1994)__
+  T. Kasai, S. Sawato, S. Iwata, Thirty Four Comparisons Are Required to Sort 13 Items, LNCS, 792, (1994) 260–269.
 
-(Knuth 1968)
-D. Knuth, The Art of Computer Programming, Volume 3, Section 5.3.1 (1968).
-Relevant extract: https://www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs341/FJ.pdf
+- __(Knuth 1968)__
+  D. Knuth, The Art of Computer Programming, Volume 3, Section 5.3.1 (1968).
+  Relevant extract: https://www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs341/FJ.pdf
 
-(Manacher 1979)
-G. K. Manacher, The Ford-Johnson sorting algorithm is not optimal. J. ACM, 26, 3 (1979) 441–456.
+- __(Manacher 1979)__
+  G. K. Manacher, The Ford-Johnson sorting algorithm is not optimal. J. ACM, 26, 3 (1979) 441–456.
 
-(Manacher 1989)
-G. K. Manacher, T. D. Bui, T. Mai, Optimal combinations of sorting and merging, J. ACM 36 (1989) 290–334.
+- __(Manacher 1989)__
+  G. K. Manacher, T. D. Bui, T. Mai, Optimal combinations of sorting and merging, J. ACM 36 (1989) 290–334.
 
-(Morwenn Github 2016)
+- __(Morwenn Github 2016)__
 https://github.com/Morwenn/cpp-sort/blob/master/include/cpp-sort/detail/merge_insertion_sort.h
 
-(Morwenn StackExchange 2016)
+- __(Morwenn StackExchange 2016)__
 https://codereview.stackexchange.com/questions/116367/ford-johnson-merge-insertion-sort
 
-(Peczarski 2004)
-M. Peczarski, New Results in Minimum-Comparison Sorting, Algorithmica, 40, 2 (2004) 133-145.
+- __(Peczarski 2004)__
+  M. Peczarski, New Results in Minimum-Comparison Sorting, Algorithmica, 40, 2 (2004) 133-145.
 
-(Peczarski 2007)
-M. Peczarski, The Ford-Johnson algorithm still unbeaten for less than 47 elements, Inf. Proc. Letters, 101, 3 (2007) 126–128.
+- __(Peczarski 2007)__
+  M. Peczarski, The Ford-Johnson algorithm still unbeaten for less than 47 elements, Inf. Proc. Letters, 101, 3 (2007) 126–128.
 
-(Peczarski 2012)
-M. Peczarski, Towards optimal sorting of 16 elements. Acta Univ. Sapientiae, Inform. 4, 2 (2012) 215–224.
-https://arxiv.org/pdf/1108.0866.pdf
+- __(Peczarski 2012)__
+  M. Peczarski, Towards optimal sorting of 16 elements. Acta Univ. Sapientiae, Inform. 4, 2 (2012) 215–224.
+  https://arxiv.org/pdf/1108.0866.pdf
 
-(Sloane 2017)
-N. J. A. Sloane, Sorting numbers: minimal number of comparisons needed to sort n elements, The Online Encyclopedia of Integer Sequences.
-https://oeis.org/A036604
+- __(Sloane 2017)__
+  N. J. A. Sloane, Sorting numbers: minimal number of comparisons needed to sort n elements, The Online Encyclopedia of Integer Sequences.
+  https://oeis.org/A036604
 
-(Wells 1965)
-M. Wells, Applications of a Language for Computing in Combinatorics, Information Processing, 65, (1965) 497–498.
+- __(Wells 1965)__
+  M. Wells, Applications of a Language for Computing in Combinatorics, Information Processing, 65, (1965) 497–498.
