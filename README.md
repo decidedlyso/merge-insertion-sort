@@ -81,7 +81,7 @@ In a table, this gives:
 | optimal by information theory |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |    |    |    |    |    |    |    |    |  * |  * |    |
 | optimal by exhaustive search  |    |    |    |    |    |    |    |    |    |    |    |  * |  * |  * |  * |    |    |    |    |    |    |  * |
 
-Merge Insertion Sort is worst-case is equal to the information theoretic minimum (and thus optimal) for N = 1 to 11, 20 and 21.
+Merge Insertion Sort's worst-case is equal to the information theoretic minimum, and thus optimal, for N = 1 to 11, 20 and 21.
 
 Via exhaustive search on computers, Merge Insertion Sort was proven optimal for N = 12 (Wells 1965), 13 (Kasai 1994), 14, 15 and 22 (Peczarski 2004). 
 
