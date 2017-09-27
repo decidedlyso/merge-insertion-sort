@@ -1,4 +1,4 @@
-= Merge Insertion Sort / Ford-Johnson Algorithm 
+# Merge Insertion Sort / Ford-Johnson Algorithm 
 
 This library implements the Merge Insertion sorting algorithm in Clojure (also known as the Ford-Johnson Algorithm). 
 
@@ -11,7 +11,7 @@ However, in situations where the cost-of-comparison greatly outweighs the cost-o
 It is also worth noting that just because Merge Insertion Sort has the best worst case (for small N), it doesn't mean it has the best average case (which, as far as I am aware, is an open problem).
 
 
-== Usage
+## Usage
 
 As with Clojure's built-in `sort`, you can optionally provide a comparator function that returns `-1/0/+1` or `true/false`:
 
@@ -36,7 +36,7 @@ As with Clojure's built-in `sort`, you can optionally provide a comparator funct
 ```
 
  
-== Background
+## Background
 
 Merge Insertion Sort was initially described by Ford and Johnson in 1959 (Ford 1959), but only took on its name when it was featured in the Art of Computer Programming (Knuth 1968). It is often referred to as the Ford-Johnson Algorithm.
 
@@ -47,7 +47,7 @@ The key insight that underlies Merge Insertion Sort, is that it costs the same t
 It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), at least when optimizing for the worst-case.  
 
 
-== The Algorithm
+## The Algorithm
 
 The Merge Insertion Sort algorithm is as follows:
 
@@ -66,7 +66,7 @@ The Merge Insertion Sort algorithm is as follows:
 If the above explanation was confusing, peruse the code, or try: (Ford 1959), (Knuth 1968), (Ayala-Rincon 2007), or (JaakkoK 2009).  A C++ implentation also exists (Morwenn Github 2016) with an explanation by the author (Morwenn StackExchange 2016).
 
 
-== Performance
+## Performance
 
 From information theory, the lower bound for the minimum comparisons needed to sort a list is: `ceiling(log2(N!))`
 
@@ -90,7 +90,7 @@ Whether it is optimal for N = 16 to 19 is still an open question (Peczarski 2012
 The minimum number of comparisons is also tracked in a list in the Online Encyclopedia of Integer Sequences (Sloane 2017).
 
 
-== References
+## References
 
 (Ayala-Rincon 2007)
 M. Ayala-Rincon, B. T. de Abreu, J. de Sequira, A variant of the Ford-Johnson algorithm that is more space efficient. Inf. Proc. Letters, 102, 5 (2007) 201–207.
