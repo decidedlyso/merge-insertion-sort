@@ -62,6 +62,9 @@ The Merge Insertion Sort algorithm is as follows:
 
    And so, we insert the `b`s, one at a time, into the main-chain following the above progression, eventually resulting in a sorted list.
 
+Below is an example that walks through the above steps:
+
+![example diagram](./diagram.svg)
 
 If the above explanation was confusing, peruse the code, or try: (Ford 1959), (Knuth 1968), (Ayala-Rincon 2007), or (JaakkoK 2009).  A C++ implentation also exists (Morwenn Github 2016) with an explanation by the author (Morwenn StackExchange 2016).
 
