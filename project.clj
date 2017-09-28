@@ -1,4 +1,4 @@
-(defproject decidedlyso/merge-insertion-sort "1.0.1"
+(defproject decidedlyso/merge-insertion-sort "1.0.2"
 
   :description "Implementation of the comparison-efficient Merge Insertion Sort / Ford-Johnson Algorithm"
 

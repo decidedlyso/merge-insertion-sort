@@ -17,7 +17,7 @@ It is also worth noting that just because Merge Insertion Sort has the best wors
 Add the following dependency to your `project.clj`:
 
 ```clojure
-[decidedlyso/merge-insertion-sort "1.0.1"]
+[decidedlyso/merge-insertion-sort "1.0.2"]
 ```
 
 ## Usage
