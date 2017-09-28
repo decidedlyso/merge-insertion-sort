@@ -1,8 +1,8 @@
 (ns merge-insertion-sort.core
-  (:refer-clojure :exclude [sort]))
+  (:refer-clojure :exclude [sort fn->comparator]))
 
-; from cljs/core.cljs#L2383
-
+; clojurescript has this in core, but clojure does not
+; taken from cljs/core.cljs#L2383
 (defn fn->comparator
   "Given a fn that might be boolean valued or a comparator,
    return a fn that is a comparator."
