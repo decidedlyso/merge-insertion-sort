@@ -2,7 +2,7 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/decidedlyso/merge-insertion-sort.svg)](https://clojars.org/decidedlyso/merge-insertion-sort)
 
-This library implements the Merge Insertion sorting algorithm in Clojure (also known as the Ford-Johnson Algorithm). 
+This Clojure / ClojureScript library implements the Merge Insertion sorting algorithm (also known as the Ford-Johnson Algorithm). 
 
 Merge Insertion Sort is a comparison sort that minimizes the worst-case number of comparisons for small N (and has been proven optimal for N < 15, and likely optimal for N < 47). 
 
@@ -17,7 +17,7 @@ It is also worth noting that just because Merge Insertion Sort has the best wors
 Add the following dependency to your `project.clj`:
 
 ```clojure
-[decidedlyso/merge-insertion-sort "1.0.0"]
+[decidedlyso/merge-insertion-sort "1.0.1"]
 ```
 
 ## Usage
