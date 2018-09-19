@@ -80,11 +80,11 @@ If the above explanation was confusing, peruse the code, or try: (Ford 1959), (K
 
 ## Performance
 
-From information theory, the lower bound for the minimum comparisons needed to sort a list is: `⌈ log2(N!) ⌉`
+From information theory, the lower bound for the minimum comparisons needed to sort a list is: `⌈log2(N!)⌉`
 
-As derived in (Knuth 1968), the worst case comparisons for Merge Insertion Sort is: `sum(k=1..N) of ⌈ log2(3k/4) ⌉`.
+As derived in (Knuth 1968), the worst case comparisons for Merge Insertion Sort is: `sum(k=1..N) of ⌈log2(3k/4)⌉`.
 
-For comparison, worst case for binary-search-insertion is `sum(k=1..N) of ⌈ log2(k) ⌉`.
+For comparison, worst case for binary-search-insertion is `sum(k=1..N) of ⌈log2(k)⌉`.
 
 In a table, this gives:
 
@@ -95,7 +95,7 @@ In a table, this gives:
 | merge-insertion optimal by information theory |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |    |    |    |    |    |    |    |    |  * |  * |    |
 | merge-insertion optimal by exhaustive search  |    |    |    |    |    |    |    |    |    |    |    |  * |  * |  * |  * |    |    |    |    |    |    |  * |
 | binary-search-insertion worst case            |  0 |  1 |  3 |  5 |  8 | 11 | 14 | 17 | 21 | 25 | 29 | 33 | 37 | 41 | 34 | 49 | 54 | 59 | 64 | 69 | 74 | 79 |
-| `⌈ N*log2(N) ⌉`                               |  0 |  2 |  5 |  8 | 12 | 16 | 20 | 24 | 29 | 34 | 39 | 44 | 49 | 54 | 59 | 64 | 70 | 76 | 81 | 87 | 93 | 99 |
+| `⌈N*log2(N)⌉`                                 |  0 |  2 |  5 |  8 | 12 | 16 | 20 | 24 | 29 | 34 | 39 | 44 | 49 | 54 | 59 | 64 | 70 | 76 | 81 | 87 | 93 | 99 |
 
 Merge Insertion Sort's worst-case is equal to the information theoretic minimum, and thus optimal, for N = 1 to 11, 20 and 21.
 
