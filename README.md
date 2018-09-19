@@ -82,7 +82,7 @@ If the above explanation was confusing, peruse the code, or try: (Ford 1959), (K
 
 From information theory, the lower bound for the minimum comparisons needed to sort a list is: `ceiling(log2(N!))`
 
-As derived in (Knuth 1968), the worst case comparisons for Merge Insertion Sort is: `ceiling(log2(3N/4))`
+As derived in (Knuth 1968), the worst case comparisons for Merge Insertion Sort is: `sum(k=1..N) of ceiling(log2(3k/4))`.
 
 In a table, this gives:
 
