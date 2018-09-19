@@ -1,10 +1,10 @@
-# Merge Insertion Sort / Ford-Johnson Algorithm 
+# Merge Insertion Sort / Ford-Johnson Algorithm
 
 [![Clojars Project](https://img.shields.io/clojars/v/decidedlyso/merge-insertion-sort.svg)](https://clojars.org/decidedlyso/merge-insertion-sort)
 
-This Clojure / ClojureScript library implements the Merge Insertion sorting algorithm (also known as the Ford-Johnson Algorithm). 
+This Clojure / ClojureScript library implements the Merge Insertion sorting algorithm (also known as the Ford-Johnson Algorithm).
 
-Merge Insertion Sort is a comparison sort that minimizes the worst-case number of comparisons for small N (and has been proven optimal for N < 15, and likely optimal for N < 47). 
+Merge Insertion Sort is a comparison sort that minimizes the worst-case number of comparisons for small N (and has been proven optimal for N < 15, and likely optimal for N < 47).
 
 This algorithm will not make your programs faster. Even though it has a better worst-case for small N than other algorithms, its relative complexity results in worse performance on actual computers than simpler algorithms (like quicksort, timsort and merge sort).
 
@@ -44,16 +44,16 @@ As with Clojure's built-in `sort`, you can optionally provide a comparator funct
 22
 ```
 
- 
+
 ## Background
 
 Merge Insertion Sort was initially described by Ford and Johnson in 1959 (Ford 1959), but only took on its name when it was featured in the Art of Computer Programming (Knuth 1968). It is often referred to as the Ford-Johnson Algorithm.
 
-The algorithm combines merging (like in merge-sort) and binary-search-insertion (like in insertion-sort), but, it is able to achieve better worst-case performance by better selecting which elements to compare, so as to maximize the efficiency of performing binary-search-insertion. 
+The algorithm combines merging (like in merge-sort) and binary-search-insertion (like in insertion-sort), but, it is able to achieve better worst-case performance by better selecting which elements to compare, so as to maximize the efficiency of performing binary-search-insertion.
 
 The key insight that underlies Merge Insertion Sort, is that it costs the same to perform binary-search-insertion on a list of `N = 2^K` as on a list of `N = 2^(K+1)-1`. For example, the worst-case for binary-search-insertion for `N = 8` is `floor(log2(N)) = 3`, and it is the same for `N = 9 to 15`. When given a choice between elements to compare, the algorithm prefers pairs that would require inserting an element into a list of `N = 2^K-1` (ie. a list with length one less than a power of 2), because it can insert that element for one less comparison than if that insertion were to be made one insertion later.
 
-It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), at least when optimizing for the worst-case.  
+It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), at least when optimizing for the worst-case.
 
 
 ## The Algorithm
@@ -63,10 +63,10 @@ The Merge Insertion Sort algorithm is as follows:
 1. Given an unsorted list, group the list into pairs. If the list is odd, the last element is unpaired.
 2. Each pair is sorted (using a single comparison each) into what we will call [a b] pairs.
 3. The pairs are sorted recursively based on the `a` of each, and we call the pairs [a1 b1], [a2 b2] etc. If the list was odd, the unpaired element is considered the last `b`.
-4. We call the chain of `a`s the "main-chain". 
+4. We call the chain of `a`s the "main-chain".
 
-   At this point, we could take any of the `b`s and use binary-search-insertion to insert that `b` into the main-chain (which starts of as just the `a`s). When inserting, we only need to consider the values "left" of the `b` in question (for example, when inserting `b4` we only need to consider the chain up to and including `a3`). 
-   
+   At this point, we could take any of the `b`s and use binary-search-insertion to insert that `b` into the main-chain (which starts of as just the `a`s). When inserting, we only need to consider the values "left" of the `b` in question (for example, when inserting `b4` we only need to consider the chain up to and including `a3`).
+
    We could insert the `b`s in order (`b1`, `b2` ...), but the "key insight" from above suggest otherwise. Different `b`s have different worst-case costs to insert into the main-chain (worst case cost for binary-search-insertion is floor(log2(N) where N is the length of the relevant part of the main-chain). We can minimize the cost by following an order based on the Jacobsthal Numbers: *1* *3* 2 *5* 4 *11* 10 9 8 7 6 *21* 20 19 18...  (ignoring values which are greater than the `b`s we have).
 
    And so, we insert the `b`s, one at a time, into the main-chain following the above progression, eventually resulting in a sorted list.
@@ -95,7 +95,7 @@ In a table, this gives:
 
 Merge Insertion Sort's worst-case is equal to the information theoretic minimum, and thus optimal, for N = 1 to 11, 20 and 21.
 
-Via exhaustive search on computers, Merge Insertion Sort was proven optimal for N = 12 (Wells 1965), 13 (Kasai 1994), 14, 15 and 22 (Peczarski 2004). 
+Via exhaustive search on computers, Merge Insertion Sort was proven optimal for N = 12 (Wells 1965), 13 (Kasai 1994), 14, 15 and 22 (Peczarski 2004).
 
 Whether it is optimal for N = 16 to 19 is still an open question (Peczarski 2012), but no better algorithm has been found for N < 47 and it has been proven that it would need to rely on a completely different strategy (Peczarski 2007). There are modified algorithms that perform similarly to Merge Insertion Sort (Ayala-Rincon 2007), and ones that are better at N > 47 (Manacher 1979, Bui 1985, Manacher 1989).
 
