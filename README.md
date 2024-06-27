@@ -2,13 +2,13 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/decidedlyso/merge-insertion-sort.svg)](https://clojars.org/decidedlyso/merge-insertion-sort)
 
-This Clojure / ClojureScript library implements the Merge Insertion sorting algorithm (also known as the Ford-Johnson Algorithm).
+This Clojure / ClojureScript library implements the [Merge Insertion sorting algorithm](https://en.wikipedia.org/wiki/Merge-insertion_sort) (also known as the Ford-Johnson Algorithm).
 
-Merge Insertion Sort is a comparison sort that minimizes the worst-case number of comparisons for small N (and has been proven optimal for N < 15, and likely optimal for N < 47).
+Merge Insertion Sort is a [comparison sort](https://en.wikipedia.org/wiki/Comparison_sort) that minimizes the worst-case number of comparisons for small N (and has been proven optimal for N < 18, and likely optimal for N < 47).
 
-This algorithm will not make your programs faster. Even though it has a better worst-case for small N than other algorithms, its relative complexity results in worse performance on actual computers than simpler algorithms (like quicksort, timsort and merge sort).
+This algorithm will not make your programs faster. Even though it has a better worst-case for small N than most other algorithms, its implementation results in worse performance on actual computers than simpler algorithms (like quicksort, timsort and merge sort).
 
-However, in situations where the cost-of-comparison greatly outweighs the cost-of-overhead of the algorithm, Merge Insertion Sort can be useful. For example, this implemention was motivated by needing an algorithm to determine the order in which to have (infinitely-slow) humans make pairwise comparisons.
+However, in situations where the cost-of-comparison greatly outweighs the cost-of-overhead of the algorithm, Merge Insertion Sort can be useful. For example, this implemention was motivated by wanting to minimize the number of pairwise comparisons for an (~infinitely-slow) human to sort a list.
 
 It is also worth noting that just because Merge Insertion Sort has the best worst case (for small N), it doesn't mean it has the best average case (which, as far as I am aware, is an open problem).
 
@@ -53,7 +53,7 @@ The algorithm combines merging (like in merge-sort) and binary-search-insertion 
 
 The key insight that underlies Merge Insertion Sort, is that it costs the same to perform binary-search-insertion on a list of `N = 2^K` as on a list of `N = 2^(K+1)-1`. For example, the worst-case for binary-search-insertion for `N = 8` is `floor(log2(N)) = 3`, and it is the same for `N = 9 to 15`. When given a choice between elements to compare, the algorithm prefers pairs that would require inserting an element into a list of `N = 2^K-1` (ie. a list with length one less than a power of 2), because it can insert that element for one less comparison than if that insertion were to be made one insertion later.
 
-It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), at least when optimizing for the worst-case.
+It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), when optimizing for the worst-case.
 
 
 ## The Algorithm
