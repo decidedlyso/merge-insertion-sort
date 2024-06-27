@@ -93,15 +93,15 @@ In a table, this gives:
 | worst case lower bound                        |  0 |  1 |  3 |  5 |  7 | 10 | 13 | 16 | 19 | 22 | 26 | 29 | 33 | 37 | 41 | 45 | 49 | 53 | 57 | 62 | 66 | 70 |
 | merge-insertion worst case                    |  0 |  1 |  3 |  5 |  7 | 10 | 13 | 16 | 19 | 22 | 26 | 30 | 34 | 38 | 42 | 46 | 50 | 54 | 58 | 62 | 66 | 71 |
 | merge-insertion optimal by information theory |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |    |    |    |    |    |    |    |    |  * |  * |    |
-| merge-insertion optimal by exhaustive search  |    |    |    |    |    |    |    |    |    |    |    |  * |  * |  * |  * |    |    |    |    |    |    |  * |
+| merge-insertion optimal by exhaustive search  |    |    |    |    |    |    |    |    |    |    |    |  * |  * |  * |  * |  * |  * |  * |    |    |    |  * |
 | binary-search-insertion worst case            |  0 |  1 |  3 |  5 |  8 | 11 | 14 | 17 | 21 | 25 | 29 | 33 | 37 | 41 | 34 | 49 | 54 | 59 | 64 | 69 | 74 | 79 |
 | `⌈N*log2(N)⌉`                                 |  0 |  2 |  5 |  8 | 12 | 16 | 20 | 24 | 29 | 34 | 39 | 44 | 49 | 54 | 59 | 64 | 70 | 76 | 81 | 87 | 93 | 99 |
 
 Merge Insertion Sort's worst-case is equal to the information theoretic minimum, and thus optimal, for N = 1 to 11, 20 and 21.
 
-Via exhaustive search on computers, Merge Insertion Sort was proven optimal for N = 12 (Wells 1965), 13 (Kasai 1994), 14, 15 and 22 (Peczarski 2004).
+Via exhaustive search on computers, Merge Insertion Sort was proven optimal for N = 12 (Wells 1965); 13 (Kasai 1994); 14, 15, 22 (Peczarski 2004); 16, 17, 18 (Stober & Weiss 2023).
 
-Whether it is optimal for N = 16 to 19 is still an open question (Peczarski 2012), but no better algorithm has been found for N < 47 and it has been proven that it would need to rely on a completely different strategy (Peczarski 2007). There are modified algorithms that perform similarly to Merge Insertion Sort (Ayala-Rincon 2007), and ones that are better at N > 47 (Manacher 1979, Bui 1985, Manacher 1989).
+Whether it is optimal for N = 19 is still an open question, but no better algorithm has been found for N < 47 and it has been proven that it would need to rely on a completely different strategy (Peczarski 2007). There are modified algorithms that perform similarly to Merge Insertion Sort (Ayala-Rincon 2007), and ones that are better at N > 47 (Manacher 1979, Bui 1985, Manacher 1989).
 
 The minimum number of comparisons is also tracked in a list in the Online Encyclopedia of Integer Sequences (Sloane 2017).
 
@@ -155,6 +155,10 @@ https://codereview.stackexchange.com/questions/116367/ford-johnson-merge-inserti
 - __(Sloane 2017)__
   N. J. A. Sloane, Sorting numbers: minimal number of comparisons needed to sort n elements, The Online Encyclopedia of Integer Sequences.
   https://oeis.org/A036604
+
+- __(Stober & Weiss 2023)__
+  F. Stober, A. Weiss, Lower bounds for sorting 16, 17, and 18 elements, 2023 Proc. Symp. Algorithm Engineering and Experiments, (2023) 201-213.
+  https://epubs.siam.org/doi/10.1137/1.9781611977561.ch17
 
 - __(Wells 1965)__
   M. Wells, Applications of a Language for Computing in Combinatorics, Information Processing, 65, (1965) 497–498.
