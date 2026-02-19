@@ -94,7 +94,7 @@ In a table, this gives:
 | merge-insertion worst case                    |  0 |  1 |  3 |  5 |  7 | 10 | 13 | 16 | 19 | 22 | 26 | 30 | 34 | 38 | 42 | 46 | 50 | 54 | 58 | 62 | 66 | 71 |
 | merge-insertion optimal by information theory |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |  * |    |    |    |    |    |    |    |    |  * |  * |    |
 | merge-insertion optimal by exhaustive search  |    |    |    |    |    |    |    |    |    |    |    |  * |  * |  * |  * |  * |  * |  * |    |    |    |  * |
-| binary-search-insertion worst case            |  0 |  1 |  3 |  5 |  8 | 11 | 14 | 17 | 21 | 25 | 29 | 33 | 37 | 41 | 34 | 49 | 54 | 59 | 64 | 69 | 74 | 79 |
+| binary-search-insertion worst case            |  0 |  1 |  3 |  5 |  8 | 11 | 14 | 17 | 21 | 25 | 29 | 33 | 37 | 41 | 45 | 49 | 54 | 59 | 64 | 69 | 74 | 79 |
 | `⌈N*log2(N)⌉`                                 |  0 |  2 |  5 |  8 | 12 | 16 | 20 | 24 | 29 | 34 | 39 | 44 | 49 | 54 | 59 | 64 | 70 | 76 | 81 | 87 | 93 | 99 |
 
 Merge Insertion Sort's worst-case is equal to the information theoretic minimum, and thus optimal, for N = 1 to 11, 20 and 21.
