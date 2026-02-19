@@ -51,7 +51,7 @@ Merge Insertion Sort was initially described by Ford and Johnson in 1959 (Ford 1
 
 The algorithm combines merging (like in merge-sort) and binary-search-insertion (like in insertion-sort), but, it is able to achieve better worst-case performance by better selecting which elements to compare, so as to maximize the efficiency of performing binary-search-insertion.
 
-The key insight that underlies Merge Insertion Sort, is that it costs the same to perform binary-search-insertion on a list of `N = 2^K` as on a list of `N = 2^(K+1)-1`. For example, the worst-case for binary-search-insertion for `N = 8` is `floor(log2(N)) = 3`, and it is the same for `N = 9 to 15`. When given a choice between elements to compare, the algorithm prefers pairs that would require inserting an element into a list of `N = 2^K-1` (ie. a list with length one less than a power of 2), because it can insert that element for one less comparison than if that insertion were to be made one insertion later.
+The **key insight** that underlies Merge Insertion Sort, is that it costs the same to perform binary-search-insertion on a list of `N = 2^K` as on a list of `N = 2^(K+1)-1`. For example, the worst-case for binary-search-insertion for `N = 8` is `floor(log2(N)) = 3`, and it is the same for `N = 9 to 15`. When given a choice between elements to compare, the algorithm prefers pairs that would require inserting an element into a list of `N = 2^K-1` (ie. a list with length one less than a power of 2), because it can insert that element for one less comparison than if that insertion were to be made one insertion later.
 
 It turns out that the order of such comparisons can be determined by an integer progression called the [Jacobsthal numbers](https://en.wikipedia.org/wiki/Jacobsthal_number), when optimizing for the worst-case.
 
@@ -65,9 +65,9 @@ The Merge Insertion Sort algorithm is as follows:
 3. The pairs are sorted recursively based on the `a` of each, and we call the pairs [a1 b1], [a2 b2] etc. If the list was odd, the unpaired element is considered the last `b`.
 4. We call the chain of `a`s the "main-chain".
 
-   At this point, we could take any of the `b`s and use binary-search-insertion to insert that `b` into the main-chain (which starts of as just the `a`s). When inserting, we only need to consider the values "left" of the `b` in question (for example, when inserting `b4` we only need to consider the chain up to and including `a3`).
+   At this point, we could take any of the `b`s and use binary-search-insertion to insert that `b` into the main-chain (which starts as just the `a`s). When inserting, we only need to consider the values "left" of the `b` in question (for example, when inserting `b4` we only need to consider the chain up to and including `a3`).
 
-   We could insert the `b`s in order (`b1`, `b2` ...), but the "key insight" from above suggest otherwise. Different `b`s have different worst-case costs to insert into the main-chain (worst case cost for binary-search-insertion is floor(log2(N) where N is the length of the relevant part of the main-chain). We can minimize the cost by following an order based on the Jacobsthal Numbers: *1* *3* 2 *5* 4 *11* 10 9 8 7 6 *21* 20 19 18...  (ignoring values which are greater than the `b`s we have).
+   We could insert the `b`s in order (`b1`, `b2` ...), but the "key insight" from above suggests otherwise. Different `b`s have different worst-case costs to insert into the main-chain (worst case cost for binary-search-insertion is floor(log2(N) where N is the length of the relevant part of the main-chain). We can minimize the cost by following an order based on the Jacobsthal Numbers: *1* *3* 2 *5* 4 *11* 10 9 8 7 6 *21* 20 19 18...  (ignoring values which are greater than the `b`s we have).
 
    And so, we insert the `b`s, one at a time, into the main-chain following the above progression, eventually resulting in a sorted list.
 
